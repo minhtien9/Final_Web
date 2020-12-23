@@ -3,7 +3,7 @@
         <div class="yamm navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Chuyển đổi điều hướng thành</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -14,7 +14,7 @@
 	<div class="nav-outer">
 		<ul class="nav navbar-nav">
 			<li class="active dropdown yamm-fw">
-				<a href="index.php" data-hover="dropdown" class="dropdown-toggle">Home</a>
+				<a href="index.php" data-hover="dropdown" class="dropdown-toggle">Trang chủ</a>
 				
 			</li>
               <?php $sql=mysqli_query($con,"select id,categoryName  from category limit 6");

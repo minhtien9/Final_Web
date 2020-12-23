@@ -9,14 +9,14 @@
         <div class="logo">
             <a href="index.php">
                 
-<h3>Shopping Portal</h3>
+<h3>Cổng thông tin mua sắm</h3>
             </a>
         </div><!-- /.logo -->
     
     </div><!-- /.footer-logo -->
 
      <div class="module-body m-t-20">
-        <p class="about-us"> Nam libero tempore, cum soluta nobis est ses  eligendi optio cumque cum soluta nobis est ses  eligendi optio cumque.</p>
+        <p class="about-us">Chất lượng là hàng đầu</p>
     
         <div class="social-icons">
             
@@ -36,16 +36,16 @@
             		 <!-- ============================================================= CONTACT TIMING============================================================= -->
 <div class="contact-timing">
 	<div class="module-heading">
-		<h4 class="module-title">opening time</h4>
+		<h4 class="module-title">Thời gian mở cửa</h4>
 	</div><!-- /.module-heading -->
 
 	<div class="module-body outer-top-xs">
 		<div class="table-responsive">
 			<table class="table">
 				<tbody>
-					<tr><td>Monday-Friday:</td><td class="pull-right">08.00 To 18.00</td></tr>
-					<tr><td>Saturday:</td><td class="pull-right">09.00 To 20.00</td></tr>
-					<tr><td>Sunday:</td><td class="pull-right">10.00 To 20.00</td></tr>
+					<tr><td>Thứ Hai-Thứ Sáu:</td><td class="pull-right">08.00 đến 18.00</td></tr>
+					<tr><td>Thứ Bảy:</td><td class="pull-right">09.00 đến 20.00</td></tr>
+					<tr><td>Chủ nhật:</td><td class="pull-right">10.00 đến 20.00</td></tr>
 				</tbody>
 			</table>
 		</div><!-- /.table-responsive -->
@@ -57,7 +57,7 @@
             		 <!-- ============================================================= INFORMATION============================================================= -->
 <div class="contact-information">
 	<div class="module-heading">
-		<h4 class="module-title">information</h4>
+		<h4 class="module-title">thông tin</h4>
 	</div><!-- /.module-heading -->
 
 	<div class="module-body outer-top-xs">
@@ -70,7 +70,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>New Delhi, Delhi</p>
+                    <p>Quận 7, Thành Phố Hồ Chí Minh</p>
                 </div>
             </li>
 
@@ -82,7 +82,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>(011) 000000000000<br>(011) 000000000000</p>
+                    <p>0123456789<br>0987654321</p>
                 </div>
             </li>
 
@@ -94,7 +94,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <span><a href="#">info@phpgurukul.com</a></span>
+                    <span><a href="#">hoangtieuphu@gmail.com</a></span>
                 </div>
             </li>
               
