@@ -46,7 +46,7 @@ header('location:my-wishlist.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Product SubCategory</title>
+	    <title>Danh mục sản phẩm phụ</title>
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="assets/css/main.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
@@ -99,7 +99,7 @@ header('location:my-wishlist.php');
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Category</h4>
+		<h4 class="widget-title">Danh mục</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
 	         <?php $sql=mysql_query("select id,categoryName from category");
@@ -202,7 +202,7 @@ while ($row=mysql_fetch_array($ret))
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
+							<button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button></a>
 													
 						</li>
 	                   
@@ -227,7 +227,7 @@ while ($row=mysql_fetch_array($ret))
 	} } else{
 ?>
 	<div class="col-sm-4 col-md-4 wow fadeInUp">
-	<h3>No Products Found</h3>
+	<h3>Không tìm thấy sản phẩm</h3>
 	</div>
 	
 	<?php } ?>
