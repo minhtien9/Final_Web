@@ -35,7 +35,7 @@ exit();
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shopping Portal | Admin login</title>
+	<title>Cổng thông tin mua sắm | Đăng nhập quản trị viên</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -52,7 +52,7 @@ exit();
 				</a>
 
 			  	<a class="brand" href="index.html">
-			  		Shopping Portal | Admin
+			  		Cổng thông tin mua sắm | Quản trị viên
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
@@ -60,7 +60,7 @@ exit();
 					<ul class="nav pull-right">
 
 						<li><a href="http://localhost/shopping/">
-						Back to Portal
+						Trở về cổng thông tin mua sắm
 						
 						</a></li>
 
@@ -81,7 +81,7 @@ exit();
 				<div class="module module-login span4 offset4">
 					<form class="form-vertical" method="post">
 						<div class="module-head">
-							<h3>Sign In</h3>
+							<h3>Đăng nhập</h3>
 						</div>
 						<span style="color:red;" ><?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg']="");?></span>
 						<div class="module-body">
@@ -99,7 +99,7 @@ exit();
 						<div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
-									<button type="submit" class="btn btn-primary pull-right" name="submit">Login</button>
+									<button type="submit" class="btn btn-primary pull-right" name="submit">Đăng nhập</button>
 									
 								</div>
 							</div>
@@ -114,7 +114,7 @@ exit();
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2017 Shopping Portal </b> All rights reserved.
+			<b class="copyright">&copy; 2017 Cổng thông tin mua sắm </b> Mọi quyền được bảo lưu.
 		</div>
 	</div>
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

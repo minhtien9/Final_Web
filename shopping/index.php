@@ -33,7 +33,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Shopping Portal Home Page</title>
+	    <title>Trang chủ cổng mua sắm</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -118,10 +118,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 						     <i class="icon fa fa-dollar"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading green">money back</h4>
+							<h4 class="info-box-heading green">Hoàn tiền</h4>
 						</div>
 					</div>	
-					<h6 class="text">30 Day Money Back Guarantee.</h6>
+					<h6 class="text">ĐẢM BẢO HOÀN TIỀN TRONG 30 NGÀY.</h6>
 				</div>
 			</div><!-- .col -->
 
@@ -132,10 +132,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<i class="icon fa fa-truck"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading orange">free shipping</h4>
+							<h4 class="info-box-heading orange">Miễn phí vận chuyển</h4>
 						</div>
 					</div>
-					<h6 class="text">free ship-on oder over Rs. 600.00</h6>	
+					<h6 class="text">MIỄN PHÍ GIAO HÀNG TRÊN 1 TRIỆU</h6>	
 				</div>
 			</div><!-- .col -->
 
@@ -146,10 +146,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<i class="icon fa fa-gift"></i>
 						</div>
 						<div class="col-xs-10">
-							<h4 class="info-box-heading red">Special Sale</h4>
+							<h4 class="info-box-heading red">GIẢM GIÁ ĐẶC BIỆT</h4>
 						</div>
 					</div>
-					<h6 class="text">All items-sale up to 20% off </h6>	
+					<h6 class="text">GIẢM GIÁ TẤT CẢ CÁC MẶT HÀNG LÊN ĐẾN 20% </h6>	
 				</div>
 			</div><!-- .col -->
 		</div><!-- /.row -->
@@ -164,11 +164,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 		<!-- ============================================== SCROLL TABS ============================================== -->
 		<div id="product-tabs-slider" class="scroll-tabs inner-bottom-vs  wow fadeInUp">
 			<div class="more-info-tab clearfix">
-			   <h3 class="new-product-title pull-left">Featured Products</h3>
+			   <h3 class="new-product-title pull-left">SẢN PHẨM NỔI BẬT</h3>
 				<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-					<li class="active"><a href="#all" data-toggle="tab">All</a></li>
-					<li><a href="#books" data-toggle="tab">Books</a></li>
-					<li><a href="#furniture" data-toggle="tab">Furniture</a></li>
+					<li class="active"><a href="#all" data-toggle="tab">Tất cả</a></li>
+					<li><a href="#books" data-toggle="tab">Sách</a></li>
+					<li><a href="#furniture" data-toggle="tab">Nội Thất</a></li>
 				</ul><!-- /.nav-tabs -->
 			</div>
 
@@ -213,7 +213,7 @@ while ($row=mysqli_fetch_array($ret))
 			</div><!-- /.product-price -->
 			
 		</div><!-- /.product-info -->
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">THÊM VÀO GIỎ HÀNG</a></div>
 			</div><!-- /.product -->
       
 			</div><!-- /.products -->
@@ -267,7 +267,7 @@ while ($row=mysqli_fetch_array($ret))
 			</div><!-- /.product-price -->
 			
 		</div><!-- /.product-info -->
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Thêm vào giỏ hàng</a></div>
 			</div><!-- /.product -->
       
 			</div><!-- /.products -->
@@ -321,7 +321,7 @@ while ($row=mysqli_fetch_array($ret))
 			</div>
 			
 		</div>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Thêm vào giỏ hàng</a></div>
 			</div>
       
 			</div>
@@ -341,7 +341,7 @@ while ($row=mysqli_fetch_array($ret))
 				<div class="row">
 					<div class="col-md-6">
 	                   <section class="section">
-	                   	<h3 class="section-title">Smart Phones</h3>
+	                   	<h3 class="section-title">Điện thoại thông minh</h3>
 	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	   
 <?php
@@ -376,7 +376,7 @@ while ($row=mysqli_fetch_array($ret))
 			</div>
 			
 		</div>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Thêm vào giỏ hàng</a></div>
 			</div>
 			</div>
 		</div>
@@ -422,7 +422,7 @@ while ($row=mysqli_fetch_array($ret))
 			</div>
 			
 		</div>
-					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add to Cart</a></div>
+					<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Thêm vào giỏ hàng</a></div>
 			</div>
 			</div>
 		</div>
@@ -441,7 +441,7 @@ while ($row=mysqli_fetch_array($ret))
 		
 
 	<section class="section featured-product inner-xs wow fadeInUp">
-		<h3 class="section-title">Fashion</h3>
+		<h3 class="section-title">Thời trang</h3>
 		<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 			<?php
 $ret=mysqli_query($con,"select * from products where category=6");
@@ -481,7 +481,7 @@ while ($row=mysqli_fetch_array($ret))
 												</span>
 
 											</div><!-- /.product-price -->
-											<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Add To Cart</a></div>
+											<div class="action"><a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary">Thêm vào giỏ hàng</a></div>
 										</div>
 									</div><!-- /.col -->
 								</div><!-- /.product-micro-row -->

@@ -158,8 +158,8 @@ error:function (){}
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Authentication</li>
+				<li><a href="home.html">Trang chủ</a></li>
+				<li class='active'>Xác thực</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -171,8 +171,8 @@ error:function (){}
 			<div class="row">
 				<!-- Sign-in -->			
 <div class="col-md-6 col-sm-6 sign-in">
-	<h4 class="">sign in</h4>
-	<p class="">Hello, Welcome to your account.</p>
+	<h4 class="">Đăng nhập</h4>
+	<p class="">Xin chào. Chào mừng bạn đến đăng nhập tài khoản của bạn.</p>
 	<form class="register-form outer-top-xs" method="post">
 	<span style="color:red;" >
 <?php
@@ -183,66 +183,66 @@ echo htmlentities($_SESSION['errmsg']="");
 ?>
 	</span>
 		<div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+		    <label class="info-title" for="exampleInputEmail1">Địa chỉ Email <span>*</span></label>
 		    <input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
 	  	<div class="form-group">
-		    <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
+		    <label class="info-title" for="exampleInputPassword1">Mật Khẩu <span>*</span></label>
 		 <input type="password" name="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" >
 		</div>
 		<div class="radio outer-xs">
-		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
+		  	<a href="forgot-password.php" class="forgot-password pull-right">Quên mật khẩu?</a>
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login</button>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Đăng nhập</button>
 	</form>					
 </div>
 <!-- Sign-in -->
 
 <!-- create a new account -->
 <div class="col-md-6 col-sm-6 create-new-account">
-	<h4 class="checkout-subtitle">create a new account</h4>
-	<p class="text title-tag-line">Create your own Shopping account.</p>
+	<h4 class="checkout-subtitle">Tạo tài khoản mới</h4>
+	<p class="text title-tag-line">Tạo tài khoản mua sắm của riêng bạn.</p>
 	<form class="register-form outer-top-xs" role="form" method="post" name="register" onSubmit="return valid();">
 <div class="form-group">
-	    	<label class="info-title" for="fullname">Full Name <span>*</span></label>
+	    	<label class="info-title" for="fullname">Tên đầy đủ <span>*</span></label>
 	    	<input type="text" class="form-control unicase-form-control text-input" id="fullname" name="fullname" required="required">
 	  	</div>
 
 
 		<div class="form-group">
-	    	<label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
+	    	<label class="info-title" for="exampleInputEmail2">Địa chỉ email <span>*</span></label>
 	    	<input type="email" class="form-control unicase-form-control text-input" id="email" onBlur="userAvailability()" name="emailid" required >
 	    	       <span id="user-availability-status1" style="font-size:12px;"></span>
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="contactno">Contact No. <span>*</span></label>
+	    	<label class="info-title" for="contactno">Số điện thoại. <span>*</span></label>
 	    	<input type="text" class="form-control unicase-form-control text-input" id="contactno" name="contactno" maxlength="10" required >
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="password">Password. <span>*</span></label>
+	    	<label class="info-title" for="password">Mật khẩu. <span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="password" name="password"  required >
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="confirmpassword">Confirm Password. <span>*</span></label>
+	    	<label class="info-title" for="confirmpassword">Nhập lại mật khẩu. <span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="confirmpassword" name="confirmpassword" required >
 	  	</div>
 
 
-	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button" id="submit">Sign Up</button>
+	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button" id="submit">Đăng kí</button>
 	</form>
-	<span class="checkout-subtitle outer-top-xs">Sign Up Today And You'll Be Able To :  </span>
+	<span class="checkout-subtitle outer-top-xs">ĐĂNG KÝ NGAY HÔM NAY VÀ BẠN SẼ CÓ THỂ: </span>
 	<div class="checkbox">
 	  	<label class="checkbox">
-		  	Speed your way through the checkout.
+		  	Tăng tốc theo cách của bạn trong quá trình thanh toán.
 		</label>
 		<label class="checkbox">
-		Track your orders easily.
+		Theo dõi đơn đặt hàng của bạn một cách dễ dàng.
 		</label>
 		<label class="checkbox">
- Keep a record of all your purchases.
+ Giữ một bản ghi về tất cả các giao dịch mua của bạn.
 		</label>
 	</div>
 </div>	

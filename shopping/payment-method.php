@@ -95,7 +95,7 @@ else{
 	    <input type="radio" name="paymethod" value="COD" checked="checked"> COD
 	     <input type="radio" name="paymethod" value="Internet Banking"> Internet Banking
 	     <input type="radio" name="paymethod" value="Debit / Credit card"> Debit / Credit card <br /><br />
-	     <input type="submit" value="submit" name="submit" class="btn btn-primary">
+	     <input type="submit" value="Gửi" name="submit" class="btn btn-primary">
 	    	
 
 	    </form>		
