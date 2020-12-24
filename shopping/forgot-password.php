@@ -47,7 +47,7 @@ exit();
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Shopping Portal | Forgot Password</title>
+	    <title>Cổng mua sắm | Quên mật khẩu</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -117,8 +117,8 @@ return true;
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Forgot Password</li>
+				<li><a href="home.html">Trang chủ</a></li>
+				<li class='active'>Quên mật khẩu</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -130,7 +130,7 @@ return true;
 			<div class="row">
 				<!-- Sign-in -->			
 <div class="col-md-6 col-sm-6 sign-in">
-	<h4 class="">Forgot password</h4>
+	<h4 class="">Quên mật khẩu</h4>
 	<form class="register-form outer-top-xs" name="register" method="post">
 	<span style="color:red;" >
 <?php
@@ -141,26 +141,26 @@ echo htmlentities($_SESSION['errmsg']="");
 ?>
 	</span>
 		<div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+		    <label class="info-title" for="exampleInputEmail1">Địa chỉ Email <span>*</span></label>
 		    <input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" required >
 		</div>
 	  	<div class="form-group">
-		    <label class="info-title" for="exampleInputPassword1">Contact no <span>*</span></label>
+		    <label class="info-title" for="exampleInputPassword1">Liên hệ <span>*</span></label>
 		 <input type="text" name="contact" class="form-control unicase-form-control text-input" id="contact" required>
 		</div>
 <div class="form-group">
-	    	<label class="info-title" for="password">Password. <span>*</span></label>
+	    	<label class="info-title" for="password">Mật khẩu <span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="password" name="password"  required >
 	  	</div>
 
 <div class="form-group">
-	    	<label class="info-title" for="confirmpassword">Confirm Password. <span>*</span></label>
+	    	<label class="info-title" for="confirmpassword">Xác nhận mật khẩu <span>*</span></label>
 	    	<input type="password" class="form-control unicase-form-control text-input" id="confirmpassword" name="confirmpassword" required >
 	  	</div>
 
 
 		
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="change">Change</button>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="change">Lưu </button>
 	</form>					
 </div>
 <!-- Sign-in -->
