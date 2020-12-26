@@ -68,8 +68,8 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Shopping Cart</li>
+				<li><a href="#">Trang Chủ</a></li>
+				<li class='active'>Giỏ Hàng</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -87,15 +87,15 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<thead>
 				<tr>
 					<th class="cart-romove item">#</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-description item">Hình Ảnh</th>
+					<th class="cart-product-name item">Tên Sản Phẩm</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-					<th class="cart-total item">Grandtotal</th>
-					<th class="cart-total item">Payment Method</th>
-					<th class="cart-description item">Order Date</th>
-					<th class="cart-total last-item">Action</th>
+					<th class="cart-qty item">Định Lượng</th>
+					<th class="cart-sub-total item">Giá Mỗi Đơn Vị</th>
+					<th class="cart-total item">Tổng Cộng</th>
+					<th class="cart-total item">Phương Thức Thanh Toán</th>
+					<th class="cart-description item">Ngày Đặt Hàng</th>
+					<th class="cart-total last-item">Hoạt Động</th>
 				</tr>
 			</thead><!-- /thead -->
 			
@@ -138,7 +138,7 @@ while($row=mysqli_fetch_array($query))
 					Track</td>
 				</tr>
 <?php $cnt=$cnt+1;} } else { ?>
-				<tr><td colspan="8">Either order id or  Registered email id is invalid</td></tr>
+				<tr><td colspan="8">Id đơn đặt hàng hoặc Id email đã đăng ký đều không hợp lệ</td></tr>
 				<?php } ?>
 			</tbody><!-- /tbody -->
 		</table><!-- /table -->

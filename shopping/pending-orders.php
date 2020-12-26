@@ -82,8 +82,8 @@ else{
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Shopping Cart</li>
+				<li><a href="#">Trang Chủ</a></li>
+				<li class='active'>Giỏ Hàng</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -101,16 +101,16 @@ else{
 			<thead>
 				<tr>
 					<th class="cart-romove item">#</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-description item">Hình Ảnh</th>
+					<th class="cart-product-name item">Tên Sản Phẩm</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-						<th class="cart-sub-total item">Shiping Charge</th>
-					<th class="cart-total">Grandtotal</th>
-					<th class="cart-total item">Payment Method</th>
-					<th class="cart-description item">Order Date</th>
-					<th class="cart-total last-item">Action</th>
+					<th class="cart-qty item">Định Lượng</th>
+					<th class="cart-sub-total item">GIá Mỗi Đơn Vị</th>
+						<th class="cart-sub-total item">Phí Vận Chuyển</th>
+					<th class="cart-total">Tổng Cộng</th>
+					<th class="cart-total item">Phương Thức Thanh Toán</th>
+					<th class="cart-description item">Ngày Đặt Hàng</th>
+					<th class="cart-total last-item">Hoạt Động</th>
 				</tr>
 			</thead><!-- /thead -->
 			
@@ -151,7 +151,7 @@ while($row=mysqli_fetch_array($query))
 <?php $cnt=$cnt+1;} ?>
 <tr>
 	<td colspan="9"><div class="cart-checkout-btn pull-right">
-							<button type="submit" name="ordersubmit" class="btn btn-primary"><a href="payment-method.php">PROCCED To Payment</a></button>
+							<button type="submit" name="ordersubmit" class="btn btn-primary"><a href="payment-method.php">Được Thành Công Để Thanh Toán</a></button>
 						
 						</div></td>
 
