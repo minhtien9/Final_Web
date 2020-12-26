@@ -104,7 +104,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 
 			<ul class="list-inline list-unstyled">
-				<li><a href="index.php">Home</a></li>
+				<li><a href="index.php">Trang Chủ</a></li>
 				<li><?php echo htmlentities($rw['catname']);?></a></li>
 				<li><?php echo htmlentities($rw['subcatname']);?></li>
 				<li class='active'><?php echo htmlentities($rw['pname']);?></li>
@@ -122,7 +122,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 
 					<!-- ==============================================CATEGORY============================================== -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
-	<h3 class="section-title">Category</h3>
+	<h3 class="section-title">Thể Loại</h3>
 	<div class="sidebar-widget-body m-t-10">
 		<div class="accordion">
 
@@ -144,7 +144,7 @@ while($row=mysqli_fetch_array($sql))
 </div>
 	<!-- ============================================== CATEGORY : END ============================================== -->					<!-- ============================================== HOT DEALS ============================================== -->
 <div class="sidebar-widget hot-deals wow fadeInUp">
-	<h3 class="section-title">hot deals</h3>
+	<h3 class="section-title">Ưu Đãi Lớn</h3>
 	<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
 		
 								   <?php
@@ -185,7 +185,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 									<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
-						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
+						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Thêm Vào Giỏ Hàng</a>
 													
 															
 								</div>
@@ -341,7 +341,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									<div class="col-sm-3">
 										<div class="stock-box">
-											<span class="label">Shipping Charge :</span>
+											<span class="label">Phí Vận Chuyển :</span>
 										</div>	
 									</div>
 									<div class="col-sm-9">
@@ -413,7 +413,7 @@ $num=mysqli_num_rows($rt);
 									</div>
 
 									<div class="col-sm-7">
-										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> Thêm Vào Giỏ Hàng</a>
 									</div>
 
 									
@@ -445,7 +445,7 @@ $num=mysqli_num_rows($rt);
 					<div class="row">
 						<div class="col-sm-3">
 							<ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-								<li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
+								<li class="active"><a data-toggle="tab" href="#description">SỰ MIÊU TẢ</a></li>
 								<li><a data-toggle="tab" href="#review">REVIEW</a></li>
 							</ul><!-- /.nav-tabs #product-tabs -->
 						</div>
@@ -579,7 +579,7 @@ while($rvw=mysqli_fetch_array($qry))
 			$subcid=$row['subCategory']; } ?>
 				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">Realted Products </h3>
+	<h3 class="section-title">Sản Phẩm Hiện Thực </h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 	   
 		<?php 

@@ -123,8 +123,8 @@ header('location:payment-method.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Shopping Cart</li>
+				<li><a href="#">Trang Chủ</a></li>
+				<li class='active'>Giỏ Hàng</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -143,14 +143,14 @@ if(!empty($_SESSION['cart'])){
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th class="cart-romove item">Remove</th>
-					<th class="cart-description item">Image</th>
-					<th class="cart-product-name item">Product Name</th>
+					<th class="cart-romove item">Xóa</th>
+					<th class="cart-description item">Hình Ảnh</th>
+					<th class="cart-product-name item">Tên Sản Phẩm</th>
 			
-					<th class="cart-qty item">Quantity</th>
-					<th class="cart-sub-total item">Price Per unit</th>
-					<th class="cart-sub-total item">Shipping Charge</th>
-					<th class="cart-total last-item">Grandtotal</th>
+					<th class="cart-qty item">Định Lượng</th>
+					<th class="cart-sub-total item">Giá Mỗi Đơn Vị</th>
+					<th class="cart-sub-total item">Phí Vận Chuyển</th>
+					<th class="cart-total last-item">Tổng Cộng</th>
 				</tr>
 			</thead><!-- /thead -->
 			<tfoot>
@@ -158,8 +158,8 @@ if(!empty($_SESSION['cart'])){
 					<td colspan="7">
 						<div class="shopping-cart-btn">
 							<span class="">
-								<a href="index.php" class="btn btn-upper btn-primary outer-left-xs">Continue Shopping</a>
-								<input type="submit" name="submit" value="Update shopping cart" class="btn btn-upper btn-primary pull-right outer-right-xs">
+								<a href="index.php" class="btn btn-upper btn-primary outer-left-xs">Tiếp Tục Mua Sắm</a>
+								<input type="submit" name="submit" value="Cập Nhật Giỏ Hàng" class="btn btn-upper btn-primary pull-right outer-right-xs">
 							</span>
 						</div><!-- /.shopping-cart-btn -->
 					</td>
@@ -245,7 +245,7 @@ $_SESSION['pid']=$pdtid;
 		<thead>
 			<tr>
 				<th>
-					<span class="estimate-title">Shipping Address</span>
+					<span class="estimate-title">Địa Chỉ Giao Hàng</span>
 				</th>
 			</tr>
 		</thead>
@@ -276,7 +276,7 @@ while ($rt=mysqli_fetch_array($qry)) {
 		<thead>
 			<tr>
 				<th>
-					<span class="estimate-title">Billing Address</span>
+					<span class="estimate-title">Địa Chỉ Thanh Toán</span>
 				</th>
 			</tr>
 		</thead>
@@ -308,7 +308,7 @@ while ($rt=mysqli_fetch_array($qry)) {
 				<th>
 					
 					<div class="cart-grand-total">
-						Grand Total<span class="inner-left-md"><?php echo $_SESSION['tp']="$totalprice". ".00"; ?></span>
+						Tổng Cộng<span class="inner-left-md"><?php echo $_SESSION['tp']="$totalprice". ".00"; ?></span>
 					</div>
 				</th>
 			</tr>
@@ -317,7 +317,7 @@ while ($rt=mysqli_fetch_array($qry)) {
 				<tr>
 					<td>
 						<div class="cart-checkout-btn pull-right">
-							<button type="submit" name="ordersubmit" class="btn btn-primary">PROCCED TO CHEKOUT</button>
+							<button type="submit" name="ordersubmit" class="btn btn-primary">Được Thành Công Để CHEKOUT</button>
 						
 						</div>
 					</td>

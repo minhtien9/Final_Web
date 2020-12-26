@@ -111,7 +111,7 @@ header('location:my-wishlist.php');
 	            <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown outer-bottom-xs">       
 <div class="side-menu animate-dropdown outer-bottom-xs">
-    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>        
+    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i>Danh Mục Phụ</div>        
     <nav class="yamm megamenu-horizontal" role="navigation">
   
         <ul class="nav">
@@ -228,7 +228,7 @@ while ($row=mysqli_fetch_array($ret))
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
+							<button class="btn btn-primary" type="button">Thêm Vào Giỏ Hàng</button></a>
 													
 						</li>
 	                   

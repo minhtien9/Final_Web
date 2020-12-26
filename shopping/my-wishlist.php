@@ -97,8 +97,8 @@ header('location:my-wishlist.php');
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Wishlish</li>
+				<li><a href="home.html">Trang Chủ</a></li>
+				<li class='active'>SP Yêu Thích</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -113,7 +113,7 @@ header('location:my-wishlist.php');
 		<table class="table">
 			<thead>
 				<tr>
-					<th colspan="4">my wishlist</th>
+					<th colspan="4">Sản Phẩm Yêu Thích Của Tôi</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -158,7 +158,7 @@ $num=mysqli_num_rows($rt);
 				</tr>
 				<?php } } else{ ?>
 				<tr>
-					<td style="font-size: 18px; font-weight:bold ">Your Wishlist is Empty</td>
+					<td style="font-size: 18px; font-weight:bold ">Danh Sách Yêu Thích Của Bạn Đang Trống</td>
 
 				</tr>
 				<?php } ?>
