@@ -33,7 +33,7 @@ window.print();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Update Compliant</title>
+<title>Cập nhật Compliant</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link href="anuj.css" rel="stylesheet" type="text/css">
 </head>
@@ -44,11 +44,11 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Update Order !</b></div></td>
+      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Cập nhật đơn hàng !</b></div></td>
       
     </tr>
     <tr height="30">
-      <td  class="fontkink1"><b>order Id:</b></td>
+      <td  class="fontkink1"><b>ID đơn hàng:</b></td>
       <td  class="fontkink"><?php echo $oid;?></td>
     </tr>
     <?php 
@@ -60,15 +60,15 @@ $ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'")
     
     
       <tr height="20">
-      <td class="fontkink1" ><b>At Date:</b></td>
+      <td class="fontkink1" ><b>Ngày:</b></td>
       <td  class="fontkink"><?php echo $row['postingDate'];?></td>
     </tr>
      <tr height="20">
-      <td  class="fontkink1"><b>Status:</b></td>
+      <td  class="fontkink1"><b>Trạng thái:</b></td>
       <td  class="fontkink"><?php echo $row['status'];?></td>
     </tr>
      <tr height="20">
-      <td  class="fontkink1"><b>Remark:</b></td>
+      <td  class="fontkink1"><b>Ghi chú:</b></td>
       <td  class="fontkink"><?php echo $row['remark'];?></td>
     </tr>
 
@@ -87,23 +87,23 @@ $st='Delivered';
      if($st==$currrentSt)
      { ?>
    <tr><td colspan="2"><b>
-      Product Delivered </b></td>
+      Sản phẩm đã được giao </b></td>
    <?php }else  {
       ?>
    
     <tr height="50">
-      <td class="fontkink1">Status: </td>
+      <td class="fontkink1">Trạng thái: </td>
       <td  class="fontkink"><span class="fontkink1" >
         <select name="status" class="fontkink" required="required" >
-          <option value="">Select Status</option>
-                 <option value="in Process">In Process</option>
-                  <option value="Delivered">Delivered</option>
+          <option value="">Chọn trạng thái</option>
+                 <option value="in Process">Đang tiến hàng</option>
+                  <option value="Delivered">Đã giao</option>
         </select>
         </span></td>
     </tr>
 
      <tr style=''>
-      <td class="fontkink1" >Remark:</td>
+      <td class="fontkink1" >Ghi chú:</td>
       <td class="fontkink" align="justify" ><span class="fontkink">
         <textarea cols="50" rows="7" name="remark"  required="required" ></textarea>
         </span></td>
