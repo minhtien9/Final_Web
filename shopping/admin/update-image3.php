@@ -28,11 +28,7 @@ $_SESSION['msg']="Product Image Updated Successfully !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 	<title>Quản trị viên| Thêm sản phẩm</title>
-=======
-	<title>Admin| Chèn sản phẩm</title>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -72,11 +68,7 @@ $("#suggesstion-box").hide();
 
 						<div class="module">
 							<div class="module-head">
-<<<<<<< HEAD
 								<h3>Cập nhật hình ảnh sản phẩm 3</h3>
-=======
-								<h3>Cập nhật ảnh sản phẩm 3</h3>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 							</div>
 							<div class="module-body">
 
@@ -132,11 +124,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm mới 3</label>
-=======
-<label class="control-label" for="basicinput">Ảnh sản phẩm mới 3</label>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <input type="file" name="productimage3" id="productimage3" value="" class="span8 tip" required>
 </div>

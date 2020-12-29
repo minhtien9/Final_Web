@@ -10,6 +10,11 @@ else{
 date_default_timezone_set('Asia/Kolkata');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
+if(isset($_GET['del']))
+		  {
+		          mysqli_query($con,"delete from products where id = '".$_GET['id']."'");
+                  $_SESSION['delmsg']="Product deleted !!";
+		  }
 
 ?>
 <!DOCTYPE html>
@@ -17,24 +22,12 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quản trị viên| Quản lý đơn hàng</title>
+	<title>Quản trị viên |  Quản lý thành viên </title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
-	<script language="javascript" type="text/javascript">
-var popUpWin=0;
-function popUpWindow(URLStr, left, top, width, height)
-{
- if(popUpWin)
-{
-if(!popUpWin.closed) popUpWin.close();
-}
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
-}
-
-</script>
 </head>
 <body>
 <?php include('include/header.php');?>
@@ -48,7 +41,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Cấp phát đơn đặt hàng</h3>
+								<h3>Quản lý thành viên</h3>
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
@@ -62,50 +55,30 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 									<br />
 
 							
-			<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display table-responsive" >
+								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
 											<th> Tên</th>
-											<th width="50">Email / Số điện thoại</th>
-											<th>Địa chỉ giao hàng</th>
-											<th>Sản phẩm </th>
-											<th>Định lượng </th>
-											<th>Số tiền </th>
-											<th>Ngày đặt hàng</th>
-											<th>Tình trạng</th>
-											
+											<th>Mã số sinh viên</th>
 										
 										</tr>
 									</thead>
-								
-<tbody>
-<?php 
- $f1="00:00:00";
-$from=date('Y-m-d')." ".$f1;
-$t1="23:59:59";
-$to=date('Y-m-d')." ".$t1;
-$query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderDate Between '$from' and '$to'");
+									<tbody>
+
+<?php $query=mysqli_query($con,"select * from members");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
-?>										
+?>									
 										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['username']);?></td>
-											<td><?php echo htmlentities($row['useremail']);?>/<?php echo htmlentities($row['usercontact']);?></td>
-										
-											<td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingcity'].",".$row['shippingstate']."-".$row['shippingpincode']);?></td>
-											<td><?php echo htmlentities($row['productname']);?></td>
-											<td><?php echo htmlentities($row['quantity']);?></td>
-											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
-											<td><?php echo htmlentities($row['orderdate']);?></td>
-											<td>    <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
-											</td>
-											</tr>
-
+											<td><?php echo htmlentities($row['fullname']);?></td>
+											<td><?php echo htmlentities($row['idcard']);?></td>
+											
+											
 										<?php $cnt=$cnt+1; } ?>
-										</tbody>
+										
 								</table>
 							</div>
 						</div>						

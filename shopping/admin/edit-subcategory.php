@@ -27,11 +27,7 @@ $_SESSION['msg']="Sub-Category Updated !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 	<title>Quản trị viên| Danh mục phụ</title>
-=======
-	<title>Admin| Chindr sửa danh mục phụ</title>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -58,11 +54,7 @@ $_SESSION['msg']="Sub-Category Updated !!";
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-<<<<<<< HEAD
-									<strong>Thành công!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
-=======
 									<strong>Hoàn thành!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 									</div>
 <?php } ?>
 
@@ -78,11 +70,7 @@ while($row=mysqli_fetch_array($query))
 ?>		
 
 <div class="control-group">
-<<<<<<< HEAD
 <label class="control-label" for="basicinput">Danh mục</label>
-=======
-<label class="control-label" for="basicinput">Thể loại</label>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <select name="category" class="span8 tip" required>
 <option value="<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($catname=$row['categoryName']);?></option>

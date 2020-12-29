@@ -18,11 +18,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 	<title>Quản trị viên| Cấp phát đơn đặt hàng</title>
-=======
-	<title>Admin| Đơn hàng chờ xử lí</title>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -53,18 +49,14 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-<<<<<<< HEAD
 								<h3>Cấp phát đơn đặt hàng</h3>
-=======
-								<h3>Đơn hành chờ xử lí</h3>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Lỗi!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
 									</div>
 <?php } ?>
 
@@ -76,7 +68,6 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 										<tr>
 											<th>#</th>
 											<th> Tên</th>
-<<<<<<< HEAD
 											<th width="50">Email / Số điện thoại</th>
 											<th>Địa chỉ giao hàngs</th>
 											<th>Sản phẩm </th>
@@ -84,15 +75,6 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 											<th>Số tiền</th>
 											<th>Ngày đặt hàng</th>
 											<th>Tình trạng</th>
-=======
-											<th width="50">Email /Liên hệ</th>
-											<th>Địa chỉ giao hàng</th>
-											<th>Sản phẩm </th>
-											<th>Qty </th>
-											<th>Giá </th>
-											<th>Ngày đặt hàng</th>
-											<th>Hình thức vận chuyển</th>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 											
 										
 										</tr>

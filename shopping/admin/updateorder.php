@@ -44,19 +44,10 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
     <tr height="50">
-<<<<<<< HEAD
-      <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Để cập nhật !</b></div></td>
-      
-    </tr>
-    <tr height="30">
-      <td  class="fontkink1"><b>Mã đơn hàng:</b></td>
-=======
       <td colspan="2" class="fontkink2" style="padding-left:0px;"><div class="fontpink2"> <b>Cập nhật đơn hàng !</b></div></td>
-      
     </tr>
     <tr height="30">
       <td  class="fontkink1"><b>ID đơn hàng:</b></td>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
       <td  class="fontkink"><?php echo $oid;?></td>
     </tr>
     <?php 
@@ -68,11 +59,7 @@ $ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'")
     
     
       <tr height="20">
-<<<<<<< HEAD
       <td class="fontkink1" ><b>Vào ngày:</b></td>
-=======
-      <td class="fontkink1" ><b>Ngày:</b></td>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
       <td  class="fontkink"><?php echo $row['postingDate'];?></td>
     </tr>
      <tr height="20">
@@ -80,11 +67,7 @@ $ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'")
       <td  class="fontkink"><?php echo $row['status'];?></td>
     </tr>
      <tr height="20">
-<<<<<<< HEAD
-      <td  class="fontkink1"><b>Nhận xét:</b></td>
-=======
       <td  class="fontkink1"><b>Ghi chú:</b></td>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
       <td  class="fontkink"><?php echo $row['remark'];?></td>
     </tr>
 
@@ -112,23 +95,13 @@ $st='Delivered';
       <td  class="fontkink"><span class="fontkink1" >
         <select name="status" class="fontkink" required="required" >
           <option value="">Chọn trạng thái</option>
-<<<<<<< HEAD
                  <option value="in Process">Đang tiến hành</option>
                   <option value="Delivered">Đã giao hàng</option>
-=======
-                 <option value="in Process">Đang tiến hàng</option>
-                  <option value="Delivered">Đã giao</option>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
         </select>
         </span></td>
     </tr>
-
      <tr style=''>
-<<<<<<< HEAD
-      <td class="fontkink1" >Nhận xét:</td>
-=======
       <td class="fontkink1" >Ghi chú:</td>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
       <td class="fontkink" align="justify" ><span class="fontkink">
         <textarea cols="50" rows="7" name="remark"  required="required" ></textarea>
         </span></td>

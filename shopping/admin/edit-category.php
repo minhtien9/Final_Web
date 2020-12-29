@@ -85,12 +85,8 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
 									
 <div class="control-group">
-<<<<<<< HEAD
 <label class="control-label" for="basicinput">Tên danh mục</label>
-=======
-<label class="control-label" for="basicinput">Tên thể loại</label>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
-<div class="controls">
+<div class="controls">bca76
 <input type="text" placeholder="Enter category Name"  name="category" class="span8 tip" required>
 </div>
 </div>
@@ -105,11 +101,7 @@ if(isset($_GET['del']))
 
 	<div class="control-group">
 											<div class="controls">
-<<<<<<< HEAD
-												<button type="submit" name="submit" class="btn">Tạo</button>
-=======
 												<button type="submit" name="submit" class="btn">Cập nhật</button>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 											</div>
 										</div>
 									</form>
