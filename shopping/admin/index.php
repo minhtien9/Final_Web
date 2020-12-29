@@ -51,7 +51,7 @@ exit();
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html">
+			  	<a class="brand" href="../index.php">
 			  		Cổng thông tin mua sắm | Quản trị viên
 			  	</a>
 
@@ -59,7 +59,7 @@ exit();
 				
 					<ul class="nav pull-right">
 
-						<li><a href="http://localhost/shopping/">
+						<li><a href="../index.php">
 						Trở về cổng thông tin mua sắm
 						
 						</a></li>

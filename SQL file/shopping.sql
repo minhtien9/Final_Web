@@ -27,6 +27,18 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
+CREATE TABLE 'members'(
+	'id' int(11) NOT NULL,
+	'fullname' varchar(255) NOT NULL, 
+	'idcard' varchar(255) NOT NULL, 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO 'members' ('id','fullname','idcard') VALUES
+(1,'Võ Minh Tiến','1811547384');
+(2,'Hà Minh Đạt','1800005131');
+(3,'Huỳnh Đức Hoàng','1800006385');
+(4,'Huỳnh Ngọc Điệp','1800006382');
+(5,'Trần Thái Bình','1800001156');
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,

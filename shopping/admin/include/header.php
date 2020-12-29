@@ -5,7 +5,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html">
+			  	<a class="brand" href="../index.php">
 			  		Cổng thông tin mua sắm | Quản trị viên
 			  	</a>
 
