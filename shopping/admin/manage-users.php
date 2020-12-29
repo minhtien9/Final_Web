@@ -22,7 +22,11 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<title>Quản trị viên| Quản lý người dùng</title>
+=======
+	<title>Admin| Quản lí tài khoản</title>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -41,14 +45,18 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
+<<<<<<< HEAD
 								<h3>Quản lý người dùng</h3>
+=======
+								<h3>Quản lí tài khoản</h3>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+									<strong>Lỗi!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
 									</div>
 <?php } ?>
 
@@ -61,10 +69,17 @@ if(isset($_GET['del']))
 											<th>#</th>
 											<th> Tên</th>
 											<th>Email </th>
+<<<<<<< HEAD
 											<th>Số điện thoại</th>
 											<th>Địa chỉ giao hàng/thành phố/tiểu ban </th>
 											<th>Địa chỉ thanh toán/thành phố/tiểu ban </th>
 											<th>Ngày tạo tài khoản </th>
+=======
+											<th>Liên hệ</th>
+											<th>Địa chỉ giao hàng/Thành phố/Quận/Mã PIN </th>
+											<th>Địa chỉ thanh toán/Thành phố/Quận/Mã PIN </th>
+											<th>Ngày đăng kí </th>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 										
 										</tr>
 									</thead>

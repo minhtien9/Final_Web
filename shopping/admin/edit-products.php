@@ -32,7 +32,11 @@ $_SESSION['msg']="Product Updated Successfully !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<title>Quản trị viên| Thêm sản phẩm</title>
+=======
+	<title>Admin| Nhập sản phẩm</title>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -72,7 +76,11 @@ $("#suggesstion-box").hide();
 
 						<div class="module">
 							<div class="module-head">
+<<<<<<< HEAD
 								<h3>Thêm sản phẩm</h3>
+=======
+								<h3>Nhập sản phẩm</h3>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 							</div>
 							<div class="module-body">
 
@@ -80,7 +88,7 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Well done!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Hoàn thành!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
 									</div>
 <?php } ?>
 
@@ -150,7 +158,11 @@ while($rw=mysqli_fetch_array($query))
 </div>
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Tên công ty</label>
+=======
+<label class="control-label" for="basicinput">Công ty sản xuất</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <input type="text"    name="productCompany"  placeholder="Enter Product Comapny Name" value="<?php echo htmlentities($row['productCompany']);?>" class="span8 tip" required>
 </div>
@@ -170,7 +182,11 @@ while($rw=mysqli_fetch_array($query))
 </div>
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Mô tả Sản phẩm</label>
+=======
+<label class="control-label" for="basicinput">Mô tả sản phẩm</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <textarea  name="productDescription"  placeholder="Enter Product Description" rows="6" class="span8 tip">
 <?php echo htmlentities($row['productDescription']);?>
@@ -179,19 +195,27 @@ while($rw=mysqli_fetch_array($query))
 </div>
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Phí vận chuyển sản phẩm</label>
+=======
+<label class="control-label" for="basicinput">Phí vận chuyển</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <input type="text"    name="productShippingcharge"  placeholder="Enter Product Shipping Charge" value="<?php echo htmlentities($row['shippingCharge']);?>" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Sản phẩm có sẵn</label>
+=======
+<label class="control-label" for="basicinput">Sản phẩm có sẳn</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <select   name="productAvailability"  id="productAvailability" class="span8 tip" required>
 <option value="<?php echo htmlentities($row['productAvailability']);?>"><?php echo htmlentities($row['productAvailability']);?></option>
-<option value="In Stock">In Stock</option>
-<option value="Out of Stock">Out of Stock</option>
+<option value="In Stock">Trong kho</option>
+<option value="Out of Stock">Hết hàng</option>
 </select>
 </div>
 </div>
@@ -199,26 +223,44 @@ while($rw=mysqli_fetch_array($query))
 
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm 1</label>
 <div class="controls">
 <img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage1']);?>" width="200" height="100"> <a href="update-image1.php?id=<?php echo $row['id'];?>">Thay đổi hình ảnh</a>
+=======
+<label class="control-label" for="basicinput">Ảnh sản phẩm 1</label>
+<div class="controls">
+<img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage1']);?>" width="200" height="100"> <a href="update-image1.php?id=<?php echo $row['id'];?>">Thay đổi</a>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 </div>
 </div>
 
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm 2</label>
 <div class="controls">
 <img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage2']);?>" width="200" height="100"> <a href="update-image2.php?id=<?php echo $row['id'];?>">Thay đổi hình ảnh</a>
+=======
+<label class="control-label" for="basicinput">Ảnh sản phẩm 2</label>
+<div class="controls">
+<img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage2']);?>" width="200" height="100"> <a href="update-image2.php?id=<?php echo $row['id'];?>">Thay đổi</a>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 </div>
 </div>
 
 
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm 3</label>
 <div class="controls">
 <img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage3']);?>" width="200" height="100"> <a href="update-image3.php?id=<?php echo $row['id'];?>">Thay đổi hình ảnh</a>
+=======
+<label class="control-label" for="basicinput">Ảnh sản phẩm 3</label>
+<div class="controls">
+<img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage3']);?>" width="200" height="100"> <a href="update-image3.php?id=<?php echo $row['id'];?>">Thay đổi</a>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 </div>
 </div>
 <?php } ?>

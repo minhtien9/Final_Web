@@ -29,7 +29,11 @@ $_SESSION['msg']="Product Image Updated Successfully !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<title>Quản trị viên| Cập nhật hình ảnh sản phẩm</title>
+=======
+	<title>Admin| Cập nhật ảnh sản phẩm</title>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -69,7 +73,11 @@ $("#suggesstion-box").hide();
 
 						<div class="module">
 							<div class="module-head">
+<<<<<<< HEAD
 								<h3>Cập nhật hình ảnh sản phẩm 1</h3>
+=======
+								<h3>Cập nhật ảnh sản phẩm 1</h3>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 							</div>
 							<div class="module-body">
 
@@ -77,7 +85,11 @@ $("#suggesstion-box").hide();
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
+<<<<<<< HEAD
 									<strong>Thành công!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+=======
+									<strong>Hoàn thành!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 									</div>
 <?php } ?>
 
@@ -108,7 +120,11 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm hiện tại 1</label>
+=======
+<label class="control-label" for="basicinput">Ảnh sản phẩm hiện tại 1</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <img src="productimages/<?php echo htmlentities($pid);?>/<?php echo htmlentities($row['productImage1']);?>" width="200" height="100"> 
 </div>
@@ -117,7 +133,11 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
+<<<<<<< HEAD
 <label class="control-label" for="basicinput">Hình ảnh sản phẩm mới 1</label>
+=======
+<label class="control-label" for="basicinput">Ảnh sản phẩm mới 1</label>
+>>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <input type="file" name="productimage1" id="productimage1" value="" class="span8 tip" required>
 </div>
