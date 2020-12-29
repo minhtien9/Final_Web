@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('include/config.php');
@@ -47,7 +46,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Sub Category</h3>
+								<h3>Hạng mục phụ</h3>
 							</div>
 							<div class="module-body">
 
@@ -73,10 +72,10 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="subcategory" method="post" >
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Category</label>
+<label class="control-label" for="basicinput">Thể loại</label>
 <div class="controls">
 <select name="category" class="span8 tip" required>
-<option value="">Select Category</option> 
+<option value="">Chọn loại</option> 
 <?php $query=mysqli_query($con,"select * from category");
 while($row=mysqli_fetch_array($query))
 {?>
@@ -89,9 +88,9 @@ while($row=mysqli_fetch_array($query))
 
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">SubCategory Name</label>
+<label class="control-label" for="basicinput">Tên danh mục phụ</label>
 <div class="controls">
-<input type="text" placeholder="Enter SubCategory Name"  name="subcategory" class="span8 tip" required>
+<input type="text" placeholder="Nhập tên danh mục"  name="subcategory" class="span8 tip" required>
 </div>
 </div>
 
@@ -99,7 +98,7 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Create</button>
+												<button type="submit" name="submit" class="btn">Tạo</button>
 											</div>
 										</div>
 									</form>
@@ -109,18 +108,18 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Sub Category</h3>
+								<h3>Hạng mục phụ</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Category</th>
-											<th>Description</th>
-											<th>Creation date</th>
-											<th>Last Updated</th>
-											<th>Action</th>
+											<th>Thể loại</th>
+											<th>Sự miêu tả</th>
+											<th>Ngày thành lập</th>
+											<th>Cập nhật mới nhất</th>
+											<th>Họt động</th>
 										</tr>
 									</thead>
 									<tbody>

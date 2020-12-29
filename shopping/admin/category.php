@@ -32,7 +32,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Category</title>
+	<title>Quản trị viên| Tạo danh mục</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -51,7 +51,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Category</h3>
+								<h3>Danh mục</h3>
 							</div>
 							<div class="module-body">
 
@@ -59,7 +59,7 @@ if(isset($_GET['del']))
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Well done!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Thành công!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
 									</div>
 <?php } ?>
 
@@ -77,7 +77,7 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Category Name</label>
+<label class="control-label" for="basicinput">Tên danh mục</label>
 <div class="controls">
 <input type="text" placeholder="Enter category Name"  name="category" class="span8 tip" required>
 </div>
@@ -85,7 +85,7 @@ if(isset($_GET['del']))
 
 
 <div class="control-group">
-											<label class="control-label" for="basicinput">Description</label>
+											<label class="control-label" for="basicinput">Mô tả</label>
 											<div class="controls">
 												<textarea class="span8" name="description" rows="5"></textarea>
 											</div>
@@ -93,7 +93,7 @@ if(isset($_GET['del']))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Create</button>
+												<button type="submit" name="submit" class="btn">Tạo</button>
 											</div>
 										</div>
 									</form>
@@ -103,18 +103,18 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage Categories</h3>
+								<h3>Quản lý Danh mục</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Category</th>
-											<th>Description</th>
-											<th>Creation date</th>
-											<th>Last Updated</th>
-											<th>Action</th>
+											<th>Thể loại</th>
+											<th>Mô tả</th>
+											<th>Ngày tạo</th>
+											<th>Cập nhật lần cuối</th>
+											<th>Tình trạng</th>
 										</tr>
 									</thead>
 									<tbody>

@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('include/config.php');
@@ -41,7 +40,7 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage Products</h3>
+								<h3>Quản lý sản phẩm</h3>
 							</div>
 							<div class="module-body table">
 	<?php if(isset($_GET['del']))
@@ -59,12 +58,12 @@ if(isset($_GET['del']))
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Product Name</th>
-											<th>Category </th>
-											<th>Subcategory</th>
-											<th>Company Name</th>
-											<th>Product Creation Date</th>
-											<th>Action</th>
+											<th>Tên sản phẩm</th>
+											<th>Thể loại </th>
+											<th>Danh mục con</th>
+											<th>Tên công ty</th>
+											<th>Ngày tạo sản phẩm</th>
+											<th>Hoạt động</th>
 										</tr>
 									</thead>
 									<tbody>

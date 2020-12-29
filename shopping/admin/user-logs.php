@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('include/config.php');
@@ -33,7 +32,7 @@ else{
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage Users</h3>
+								<h3>Quản lý người dùng</h3>
 							</div>
 							<div class="module-body table">
 	
@@ -42,11 +41,11 @@ else{
 									<thead>
 										<tr>
 											<th>#</th>
-											<th> User Email</th>
-											<th>User IP </th>
-											<th>Login Time</th>
-											<th>Logout Time </th>
-											<th>Status </th>
+											<th> Email</th>
+											<th>IP người dùng </th>
+											<th>Thời gian đăng nhập</th>
+											<th>Thời gian đăng xuất </th>
+											<th>Trạng lời </th>
 											
 										</tr>
 									</thead>

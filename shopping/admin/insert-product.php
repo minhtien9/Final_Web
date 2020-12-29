@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('include/config.php');
@@ -112,10 +111,10 @@ $("#suggesstion-box").hide();
 			<form class="form-horizontal row-fluid" name="insertproduct" method="post" enctype="multipart/form-data">
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Category</label>
+<label class="control-label" for="basicinput">Thể loại</label>
 <div class="controls">
 <select name="category" class="span8 tip" onChange="getSubcat(this.value);"  required>
-<option value="">Select Category</option> 
+<option value="">Chọn loại</option> 
 <?php $query=mysqli_query($con,"select * from category");
 while($row=mysqli_fetch_array($query))
 {?>
@@ -128,7 +127,7 @@ while($row=mysqli_fetch_array($query))
 
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Sub Category</label>
+<label class="control-label" for="basicinput">Hạng mục phụ</label>
 <div class="controls">
 <select   name="subcategory"  id="subcategory" class="span8 tip" required>
 </select>
@@ -137,34 +136,34 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Name</label>
+<label class="control-label" for="basicinput">Tên sản phẩm</label>
 <div class="controls">
 <input type="text"    name="productName"  placeholder="Enter Product Name" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Company</label>
+<label class="control-label" for="basicinput">Công ty sản phẩm</label>
 <div class="controls">
 <input type="text"    name="productCompany"  placeholder="Enter Product Comapny Name" class="span8 tip" required>
 </div>
 </div>
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Price Before Discount</label>
+<label class="control-label" for="basicinput">Giá sản phẩm trước khi giảm giá</label>
 <div class="controls">
 <input type="text"    name="productpricebd"  placeholder="Enter Product Price" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Price After Discount(Selling Price)</label>
+<label class="control-label" for="basicinput">Giá sản phẩm sau khi chiếc khấu(giá bán)</label>
 <div class="controls">
 <input type="text"    name="productprice"  placeholder="Enter Product Price" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Description</label>
+<label class="control-label" for="basicinput">Mô tả sản phẩm</label>
 <div class="controls">
 <textarea  name="productDescription"  placeholder="Enter Product Description" rows="6" class="span8 tip">
 </textarea>  
@@ -172,19 +171,19 @@ while($row=mysqli_fetch_array($query))
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Shipping Charge</label>
+<label class="control-label" for="basicinput">Phí vận chuyển</label>
 <div class="controls">
 <input type="text"    name="productShippingcharge"  placeholder="Enter Product Shipping Charge" class="span8 tip" required>
 </div>
 </div>
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Availability</label>
+<label class="control-label" for="basicinput">Sản phẩm có sẵn</label>
 <div class="controls">
 <select   name="productAvailability"  id="productAvailability" class="span8 tip" required>
-<option value="">Select</option>
-<option value="In Stock">In Stock</option>
-<option value="Out of Stock">Out of Stock</option>
+<option value="">Chọn</option>
+<option value="In Stock">Trong kho</option>
+<option value="Out of Stock">Hết hàng</option>
 </select>
 </div>
 </div>
@@ -192,7 +191,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Image1</label>
+<label class="control-label" for="basicinput">Hình ảnh sản phẩm 1</label>
 <div class="controls">
 <input type="file" name="productimage1" id="productimage1" value="" class="span8 tip" required>
 </div>
@@ -200,7 +199,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Image2</label>
+<label class="control-label" for="basicinput">Hình ảnh sản phẩm 2</label>
 <div class="controls">
 <input type="file" name="productimage2"  class="span8 tip" required>
 </div>
@@ -209,7 +208,7 @@ while($row=mysqli_fetch_array($query))
 
 
 <div class="control-group">
-<label class="control-label" for="basicinput">Product Image3</label>
+<label class="control-label" for="basicinput">Hình ảnh sản phẩm 3</label>
 <div class="controls">
 <input type="file" name="productimage3"  class="span8 tip">
 </div>
@@ -217,7 +216,7 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Insert</button>
+												<button type="submit" name="submit" class="btn">Chèn</button>
 											</div>
 										</div>
 									</form>

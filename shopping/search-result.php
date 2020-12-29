@@ -46,7 +46,7 @@ header('location:my-wishlist.php');
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Product Category</title>
+	    <title>Danh mục sản phẩm</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -136,7 +136,7 @@ while($row=mysqli_fetch_array($sql))
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
 	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Category</h4>
+		<h4 class="widget-title">Danh mục</h4>
 	</div>
 	<div class="sidebar-widget-body m-t-10">
 	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
@@ -247,7 +247,7 @@ while ($row=mysqli_fetch_array($ret))
 		</div>
 	  <?php } } else {?>
 	
-		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>No Product Found</h3>
+		<div class="col-sm-6 col-md-4 wow fadeInUp"> <h3>Không tìm thấy sản phẩm</h3>
 		</div>
 		
 <?php } ?>	
@@ -316,3 +316,4 @@ while ($row=mysqli_fetch_array($ret))
 
 </body>
 </html>
+

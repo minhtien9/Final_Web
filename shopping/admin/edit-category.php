@@ -15,11 +15,16 @@ if(isset($_POST['submit']))
 {
 	$category=$_POST['category'];
 	$description=$_POST['description'];
-	$id=intval($_GET['id']);
-$sql=mysqli_query($con,"update category set categoryName='$category',categoryDescription='$description',updationDate='$currentTime' where id='$id'");
-$_SESSION['msg']="Category Updated !!";
+$sql=mysqli_query($con,"insert into category(categoryName,categoryDescription) values('$category','$description')");
+$_SESSION['msg']="Category Created !!";
 
 }
+
+if(isset($_GET['del']))
+		  {
+		          mysqli_query($con,"delete from category where id = '".$_GET['id']."'");
+                  $_SESSION['delmsg']="Category deleted !!";
+		  }
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +32,7 @@ $_SESSION['msg']="Category Updated !!";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Category</title>
+	<title>Quản trị viên| Tạo danh mục</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -46,7 +51,7 @@ $_SESSION['msg']="Category Updated !!";
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Category</h3>
+								<h3>Danh mục</h3>
 							</div>
 							<div class="module-body">
 
@@ -54,39 +59,41 @@ $_SESSION['msg']="Category Updated !!";
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Well done!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<strong>Thành công!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
 									</div>
 <?php } ?>
 
 
+									<?php if(isset($_GET['del']))
+{?>
+									<div class="alert alert-error">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+									</div>
+<?php } ?>
+
 									<br />
 
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
-<?php
-$id=intval($_GET['id']);
-$query=mysqli_query($con,"select * from category where id='$id'");
-while($row=mysqli_fetch_array($query))
-{
-?>									
+									
 <div class="control-group">
-<label class="control-label" for="basicinput">Category Name</label>
+<label class="control-label" for="basicinput">Tên danh mục</label>
 <div class="controls">
-<input type="text" placeholder="Enter category Name"  name="category" value="<?php echo  htmlentities($row['categoryName']);?>" class="span8 tip" required>
+<input type="text" placeholder="Enter category Name"  name="category" class="span8 tip" required>
 </div>
 </div>
 
 
 <div class="control-group">
-											<label class="control-label" for="basicinput">Description</label>
+											<label class="control-label" for="basicinput">Mô tả</label>
 											<div class="controls">
-												<textarea class="span8" name="description" rows="5"><?php echo  htmlentities($row['categoryDescription']);?></textarea>
+												<textarea class="span8" name="description" rows="5"></textarea>
 											</div>
 										</div>
-									<?php } ?>	
 
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Update</button>
+												<button type="submit" name="submit" class="btn">Tạo</button>
 											</div>
 										</div>
 									</form>
@@ -94,7 +101,44 @@ while($row=mysqli_fetch_array($query))
 						</div>
 
 
-						
+	<div class="module">
+							<div class="module-head">
+								<h3>Quản lý Danh mục</h3>
+							</div>
+							<div class="module-body table">
+								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thể loại</th>
+											<th>Mô tả</th>
+											<th>Ngày tạo</th>
+											<th>Cập nhật lần cuối</th>
+											<th>Tình trạng</th>
+										</tr>
+									</thead>
+									<tbody>
+
+<?php $query=mysqli_query($con,"select * from category");
+$cnt=1;
+while($row=mysqli_fetch_array($query))
+{
+?>									
+										<tr>
+											<td><?php echo htmlentities($cnt);?></td>
+											<td><?php echo htmlentities($row['categoryName']);?></td>
+											<td><?php echo htmlentities($row['categoryDescription']);?></td>
+											<td> <?php echo htmlentities($row['creationDate']);?></td>
+											<td><?php echo htmlentities($row['updationDate']);?></td>
+											<td>
+											<a href="edit-category.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
+											<a href="category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="icon-remove-sign"></i></a></td>
+										</tr>
+										<?php $cnt=$cnt+1; } ?>
+										
+								</table>
+							</div>
+						</div>						
 
 						
 						

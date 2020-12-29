@@ -93,13 +93,8 @@ else{
 	    <div class="panel-body">
 	    <form name="payment" method="post">
 	    <input type="radio" name="paymethod" value="COD" checked="checked"> COD
-<<<<<<< HEAD
-	     <input type="radio" name="paymethod" value="Internet Banking"> Internet Banking
-	     <input type="radio" name="paymethod" value="Debit / Credit card"> Debit / Credit card <br /><br />
-=======
 	     <input type="radio" name="paymethod" value="Internet Banking"> Ngân hàng trực tuyến
 	     <input type="radio" name="paymethod" value="Debit / Credit card"> Nợ / Thẻ tín dụng <br /><br />
->>>>>>> origin/diep.huynh
 	     <input type="submit" value="Gửi" name="submit" class="btn btn-primary">
 	    	
 
