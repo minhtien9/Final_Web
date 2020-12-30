@@ -86,7 +86,11 @@ if(isset($_GET['del']))
 									
 <div class="control-group">
 <label class="control-label" for="basicinput">Tên danh mục</label>
+<<<<<<< HEAD
 <div class="controls">
+=======
+<div class="controls">bca76
+>>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 <input type="text" placeholder="Enter category Name"  name="category" class="span8 tip" required>
 </div>
 </div>

@@ -21,7 +21,11 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<title>Admin| Manage Users</title>
+=======
+	<title>Quản trị viên| Quản lý người dùng</title>
+>>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
