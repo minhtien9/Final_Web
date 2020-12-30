@@ -25,6 +25,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `members`
+--
+
+CREATE TABLE `members` (
+	 `id`int(11) NOT NULL,
+	 `fullname` varchar(255) DEFAULT NULL,
+	 `idcard` varchar(255) DEFAULT NULL,
+	 `position` varchar(255) DEFAULT NULL
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`id`,`fullname`,`idcard`,`position`) VALUES
+(1, 'Võ Minh Tiến' , '1811547384',' '),
+(2, 'Hà Minh Đạt' , '1800005131', ' '),
+(3, 'Huỳnh Đức Hoàng' , '1800006385',' '),
+(4, 'Huỳnh Ngọc Điệp' , '1800006382',' '),
+(5, 'Trần Thái Bình' , '1800001156',' ');
+
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `admin`
 --
 
@@ -34,7 +60,7 @@ CREATE TABLE `admin` (
   `password` varchar(255) NOT NULL,
   `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8; 
 
 --
 -- Dumping data for table `admin`
@@ -55,17 +81,17 @@ CREATE TABLE `category` (
   `categoryDescription` longtext,
   `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDate`, `updationDate`) VALUES
-(3, 'Books', 'Test anuj', '2017-01-24 19:17:37', '30-01-2017 12:22:24 AM'),
-(4, 'Electronics', 'Electronic Products', '2017-01-24 19:19:32', ''),
-(5, 'Furniture', 'test', '2017-01-24 19:19:54', ''),
-(6, 'Fashion', 'Fashion', '2017-02-20 19:18:52', '');
+(3, 'Sách', 'Test anuj', '2017-01-24 19:17:37', '30-01-2017 12:22:24 AM'),
+(4, 'Đồ điện tử', 'Electronic Products', '2017-01-24 19:19:32', ''),
+(5, 'Nội thất', 'test', '2017-01-24 19:19:54', ''),
+(6, 'Thời trang', 'Fashion', '2017-02-20 19:18:52', '');
 
 -- --------------------------------------------------------
 
@@ -81,7 +107,7 @@ CREATE TABLE `orders` (
   `orderDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `paymentMethod` varchar(50) DEFAULT NULL,
   `orderStatus` varchar(55) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `orders`
@@ -106,7 +132,7 @@ CREATE TABLE `ordertrackhistory` (
   `status` varchar(255) DEFAULT NULL,
   `remark` mediumtext,
   `postingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ordertrackhistory`
@@ -134,7 +160,7 @@ CREATE TABLE `productreviews` (
   `summary` varchar(255) DEFAULT NULL,
   `review` longtext,
   `reviewDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `productreviews`
@@ -167,7 +193,7 @@ CREATE TABLE `products` (
   `productAvailability` varchar(255) DEFAULT NULL,
   `postingDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
@@ -206,7 +232,7 @@ CREATE TABLE `subcategory` (
   `subcategory` varchar(255) DEFAULT NULL,
   `creationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `subcategory`
@@ -238,7 +264,7 @@ CREATE TABLE `userlog` (
   `loginTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `logout` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `userlog`
@@ -291,7 +317,7 @@ CREATE TABLE `users` (
   `billingPincode` int(11) DEFAULT NULL,
   `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -313,7 +339,7 @@ CREATE TABLE `wishlist` (
   `userId` int(11) DEFAULT NULL,
   `productId` int(11) DEFAULT NULL,
   `postingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `wishlist`
@@ -329,6 +355,9 @@ INSERT INTO `wishlist` (`id`, `userId`, `productId`, `postingDate`) VALUES
 --
 -- Indexes for table `admin`
 --
+ALTER TABLE `members`
+  ADD PRIMARY KEY (`id`);
+  
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
@@ -390,6 +419,8 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for dumped tables
 --
 
+ALTER TABLE `members`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `admin`
 --

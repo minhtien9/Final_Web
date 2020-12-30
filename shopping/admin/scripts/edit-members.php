@@ -11,30 +11,36 @@ date_default_timezone_set('Asia/Kolkata');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
+if(isset($_POST['submit']))
+{
+	$fullname=$_POST['fullname'];
+	$idcard=$_POST['idcard'];
+$sql=mysqli_query($con,"insert into members(fullname,idcard) values('$fullname','$idcard')");
+$_SESSION['msg']="Category Created !!";
+
+}
+
+if(isset($_GET['del']))
+		  {
+		          mysqli_query($con,"delete from members where id = '".$_GET['id']."'");
+                  $_SESSION['delmsg']="Category deleted !!";
+		  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quản trị viên| Quản lý đơn hàng</title>
+
+	<title>Quản trị viên| Thành viên</title>
+
+	
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
-	<script language="javascript" type="text/javascript">
-var popUpWin=0;
-function popUpWindow(URLStr, left, top, width, height)
-{
- if(popUpWin)
-{
-if(!popUpWin.closed) popUpWin.close();
-}
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
-}
-
-</script>
 </head>
 <body>
 <?php include('include/header.php');?>
@@ -46,12 +52,26 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<div class="span9">
 					<div class="content">
 
-	<div class="module">
+						<div class="module">
 							<div class="module-head">
-								<h3>Cấp phát đơn đặt hàng</h3>
+
+								<h3>Danh mục</h3>
+
+						
+
 							</div>
-							<div class="module-body table">
-	<?php if(isset($_GET['del']))
+							<div class="module-body">
+
+									<?php if(isset($_POST['submit']))
+{?>
+									<div class="alert alert-success">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+									<strong>Thành công!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									</div>
+<?php } ?>
+
+
+									<?php if(isset($_GET['del']))
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
@@ -61,51 +81,66 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 									<br />
 
-							
-			<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display table-responsive" >
+			<form class="form-horizontal row-fluid" name="members" method="post" >
+									
+<div class="control-group">
+<label class="control-label" for="basicinput">Tên thành viên</label>
+<div class="controls">
+<input type="text"   name="members" class="span8 tip" required>
+</div>
+</div>
+
+
+<div class="control-group">
+											<label class="control-label" for="basicinput">Mã số sinh viên</label>
+											<div class="controls">
+												<textarea class="span8" name="description" rows="5"></textarea>
+											</div>
+										</div>
+
+	<div class="control-group">
+											<div class="controls">
+												<button type="submit" name="submit" class="btn">Cập nhật</button>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+
+
+	<div class="module">
+							<div class="module-head">
+								<h3>Quản lý Danh mục</h3>
+							</div>
+							<div class="module-body table">
+								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th> Tên</th>
-											<th width="50">Email / Số điện thoại</th>
-											<th>Địa chỉ giao hàng</th>
-											<th>Sản phẩm </th>
-											<th>Định lượng </th>
-											<th>Số tiền </th>
-											<th>Ngày đặt hàng</th>
-											<th>Tình trạng</th>
-											
-										
+											<th>Họ và Tên</th>
+											<th>Mã số sinh viên</th>
+											<th>Hoạt động</th>
 										</tr>
 									</thead>
-								
-<tbody>
-<?php 
- $f1="00:00:00";
-$from=date('Y-m-d')." ".$f1;
-$t1="23:59:59";
-$to=date('Y-m-d')." ".$t1;
-$query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderDate Between '$from' and '$to'");
+									<tbody>
+
+<?php $query=mysqli_query($con,"select * from members");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
-?>										
+?>									
 										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['username']);?></td>
-											<td><?php echo htmlentities($row['useremail']);?>/<?php echo htmlentities($row['usercontact']);?></td>
+											<td><?php echo htmlentities($row['fullname']);?></td>
+											<td><?php echo htmlentities($row['idcard']);?></td>
+											<td> <?php echo htmlentities($row['position']);?>
 										
-											<td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingcity'].",".$row['shippingstate']."-".$row['shippingpincode']);?></td>
-											<td><?php echo htmlentities($row['productname']);?></td>
-											<td><?php echo htmlentities($row['quantity']);?></td>
-											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
-											<td><?php echo htmlentities($row['orderdate']);?></td>
-											<td>    <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
-											</td>
-											</tr>
-
+											
+											<a href="edit-members.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
+											<a href="manage-members.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="icon-remove-sign"></i></a></td>
+										</tr>
 										<?php $cnt=$cnt+1; } ?>
-										</tbody>
+										
 								</table>
 							</div>
 						</div>						

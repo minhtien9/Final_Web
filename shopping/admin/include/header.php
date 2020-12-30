@@ -5,14 +5,14 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html">
-			  		Shopping Portal | Admin
+			  	<a class="brand" href="../index.php">
+			  		Cổng thông tin mua sắm | Quản trị viên
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 					<ul class="nav pull-right">
 						<li><a href="#">
-							Admin
+							Quản trị viên
 						</a></li>
 						<li class="nav-user dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -20,9 +20,9 @@
 								<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="change-password.php">Change Password</a></li>
+								<li><a href="change-password.php">Đổi mật khẩu</a></li>
 								<li class="divider"></li>
-								<li><a href="logout.php">Logout</a></li>
+								<li><a href="logout.php">Đăng xuất</a></li>
 							</ul>
 						</li>
 					</ul>

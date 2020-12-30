@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include('include/config.php');
@@ -6,19 +7,23 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
+date_default_timezone_set('Asia/Kolkata');// change according timezone
+$currentTime = date( 'd-m-Y h:i:s A', time () );
+
+
 if(isset($_POST['submit']))
 {
-	$category=$_POST['category'];
-	$subcat=$_POST['SubCategorygory'];
-$sql=mysqli_query($con,"insert into subcategory(categoryid,subcategory) values('$category','$subcat')");
-$_SESSION['msg']="SubCategory Created !!";
+	$fullname=$_POST['fullame'];
+	$idCard=$_POST['idCard'];
+$sql=mysqli_query($con,"insert into members(fullname,idcard) values('$fullname','$idcard')");
+$_SESSION['msg']="Thành công !!";
 
 }
 
 if(isset($_GET['del']))
 		  {
-		          mysqli_query($con,"delete from subcategory where id = '".$_GET['id']."'");
-                  $_SESSION['delmsg']="SubCategory deleted !!";
+		          mysqli_query($con,"delete from members where id = '".$_GET['id']."'");
+                  $_SESSION['delmsg']="Thành công !!";
 		  }
 
 ?>
@@ -27,7 +32,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quản trị viên| Danh mục phụ</title>
+	<title>Quản trị viên| Tạo danh mục</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -46,7 +51,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Hạng mục phụ</h3>
+								<h3>Thành viên nhóm</h3>
 							</div>
 							<div class="module-body">
 
@@ -54,7 +59,7 @@ if(isset($_GET['del']))
 {?>
 									<div class="alert alert-success">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Well done!</strong>	<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
+									<?php echo htmlentities($_SESSION['msg']);?><?php echo htmlentities($_SESSION['msg']="");?>
 									</div>
 <?php } ?>
 
@@ -63,38 +68,28 @@ if(isset($_GET['del']))
 {?>
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
+										<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
 									</div>
 <?php } ?>
 
 									<br />
 
-			<form class="form-horizontal row-fluid" name="subcategory" method="post" >
-
-<div class="control-group">
-<label class="control-label" for="basicinput">Thể loại</label>
-<div class="controls">
-<select name="category" class="span8 tip" required>
-<option value="">Chọn loại</option> 
-<?php $query=mysqli_query($con,"select * from category");
-while($row=mysqli_fetch_array($query))
-{?>
-
-<option value="<?php echo $row['id'];?>"><?php echo $row['categoryName'];?></option>
-<?php } ?>
-</select>
-</div>
-</div>
-
+			<form class="form-horizontal row-fluid" name="members" method="post" >
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">Tên danh mục phụ</label>
+<label class="control-label" for="basicinput">Tên thành viên</label>
 <div class="controls">
-<input type="text" placeholder="Nhập tên danh mục"  name="subcategory" class="span8 tip" required>
+<input type="text"  name="members" class="span8 tip" required>
 </div>
 </div>
 
 
+<div class="control-group">
+											<label class="control-label" for="basicinput">Mã số sinh viên</label>
+											<div class="controls">
+												<textarea class="span8" name="mssv" rows="5"></textarea>
+											</div>
+										</div>
 
 	<div class="control-group">
 											<div class="controls">
@@ -108,36 +103,35 @@ while($row=mysqli_fetch_array($query))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Hạng mục phụ</h3>
+								<h3>Quản lý Thành viên</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Thể loại</th>
-											<th>Sự miêu tả</th>
-											<th>Ngày thành lập</th>
-											<th>Cập nhật mới nhất</th>
+											<th>Họ và Tên</th>
+											<th>Mã số sinh viên</th>
 											<th>Hoạt động</th>
+											
 										</tr>
 									</thead>
 									<tbody>
 
-<?php $query=mysqli_query($con,"select subcategory.id,category.categoryName,subcategory.subcategory,subcategory.creationDate,subcategory.updationDate from subcategory join category on category.id=subcategory.categoryid");
+<?php $query=mysqli_query($con,"select * from members");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
 ?>									
 										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['categoryName']);?></td>
-											<td><?php echo htmlentities($row['subcategory']);?></td>
-											<td> <?php echo htmlentities($row['creationDate']);?></td>
-											<td><?php echo htmlentities($row['updationDate']);?></td>
-											<td>
-											<a href="edit-subcategory.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
-											<a href="subcategory.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="icon-remove-sign"></i></a></td>
+											<td><?php echo htmlentities($row['fullname']);?></td>
+											<td><?php echo htmlentities($row['idcard']);?></td>
+											<td> <?php echo htmlentities($row['position']);?>
+										
+											
+											<a href="edit-members.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
+											<a href="manage-members.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Bạn có muốn xóa không?')"><i class="icon-remove-sign"></i></a></td>
 										</tr>
 										<?php $cnt=$cnt+1; } ?>
 										

@@ -2397,7 +2397,7 @@ a {
   font-size: 35px;
   line-height: 30px;
   text-transform: uppercase;
-  font-family: 'BebasNeueBold';
+  font-family: 'Roboto' !important;
   margin-top: 5px;
 }
 .info-boxes .info-box .info-box-heading.orange {

@@ -207,8 +207,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs.<?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?>	</span>
+					<?php echo htmlentities($row['productPrice']);?> Triệu			</span>
+										     <span class="price-before-discount"><?php echo htmlentities($row['productPriceBeforeDiscount']);?> Triệu	</span>
 									
 			</div><!-- /.product-price -->
 			
@@ -261,8 +261,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					 <?php echo htmlentities($row['productPrice']);?> Triệu			</span>
+										     <span class="price-before-discount"><?php echo htmlentities($row['productPriceBeforeDiscount']);?> Triệu</span>
 									
 			</div><!-- /.product-price -->
 			
@@ -315,8 +315,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs.<?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					<?php echo htmlentities($row['productPrice']);?> Triệu			</span>
+										     <span class="price-before-discount"><?php echo htmlentities($row['productPriceBeforeDiscount']);?> Triệu</span>
 									
 			</div>
 			
@@ -370,8 +370,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					 <?php echo htmlentities($row['productPrice']);?> Triệu			</span>
+										     <span class="price-before-discount"><?php echo htmlentities($row['productPriceBeforeDiscount']);?> Triệu</span>
 									
 			</div>
 			
@@ -416,8 +416,8 @@ while ($row=mysqli_fetch_array($ret))
 
 			<div class="product-price">	
 				<span class="price">
-					Rs .<?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+					<?php echo htmlentities($row['productPrice']);?> Triệu			</span>
+										     <span class="price-before-discount"><?php echo htmlentities($row['productPriceBeforeDiscount']);?> Triệu</span>
 									
 			</div>
 			
@@ -477,7 +477,7 @@ while ($row=mysqli_fetch_array($ret))
 											<div class="rating rateit-small"></div>
 											<div class="product-price">	
 												<span class="price">
-													Rs. <?php echo htmlentities($row['productPrice']);?>
+													<?php echo htmlentities($row['productPrice']);?> Triệu
 												</span>
 
 											</div><!-- /.product-price -->

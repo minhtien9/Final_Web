@@ -32,11 +32,11 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
 	<title>Quản trị viên| Tạo danh mục</title>
-=======
+
 	<title>Admin| Thể loại</title>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
+
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -55,11 +55,11 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-<<<<<<< HEAD
+
 								<h3>Danh mục</h3>
-=======
+
 								<h3>Thể loại</h3>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
+
 							</div>
 							<div class="module-body">
 
@@ -85,11 +85,7 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
 									
 <div class="control-group">
-<<<<<<< HEAD
 <label class="control-label" for="basicinput">Tên danh mục</label>
-=======
-<label class="control-label" for="basicinput">Tên thể loại</label>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 <div class="controls">
 <input type="text" placeholder="Enter category Name"  name="category" class="span8 tip" required>
 </div>
@@ -105,11 +101,7 @@ if(isset($_GET['del']))
 
 	<div class="control-group">
 											<div class="controls">
-<<<<<<< HEAD
-												<button type="submit" name="submit" class="btn">Tạo</button>
-=======
 												<button type="submit" name="submit" class="btn">Cập nhật</button>
->>>>>>> 6b9bca765405e55f4771a30d10b70e5be9ee8f7f
 											</div>
 										</div>
 									</form>
