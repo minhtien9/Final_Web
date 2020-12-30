@@ -10,7 +10,6 @@ else{
 date_default_timezone_set('Asia/Kolkata');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
-<<<<<<< HEAD
 
 if(isset($_POST['submit']))
 {
@@ -25,12 +24,6 @@ if(isset($_GET['del']))
 		  {
 		          mysqli_query($con,"delete from members where id = '".$_GET['id']."'");
                   $_SESSION['delmsg']="Thành công !!";
-=======
-if(isset($_GET['del']))
-		  {
-		          mysqli_query($con,"delete from products where id = '".$_GET['id']."'");
-                  $_SESSION['delmsg']="Product deleted !!";
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 		  }
 
 ?>
@@ -39,11 +32,7 @@ if(isset($_GET['del']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 	<title>Quản trị viên| Tạo danh mục</title>
-=======
-	<title>Quản trị viên |  Quản lý thành viên </title>
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -60,7 +49,6 @@ if(isset($_GET['del']))
 			<div class="span9">
 					<div class="content">
 
-<<<<<<< HEAD
 						<div class="module">
 							<div class="module-head">
 								<h3>Thành viên nhóm</h3>
@@ -81,24 +69,11 @@ if(isset($_GET['del']))
 									<div class="alert alert-error">
 										<button type="button" class="close" data-dismiss="alert">×</button>
 										<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
-=======
-	<div class="module">
-							<div class="module-head">
-								<h3>Quản lý thành viên</h3>
-							</div>
-							<div class="module-body table">
-	<?php if(isset($_GET['del']))
-{?>
-									<div class="alert alert-error">
-										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 									</div>
 <?php } ?>
 
 									<br />
 
-<<<<<<< HEAD
 			<form class="form-horizontal row-fluid" name="members" method="post" >
 									
 <div class="control-group">
@@ -131,23 +106,14 @@ if(isset($_GET['del']))
 								<h3>Quản lý Thành viên</h3>
 							</div>
 							<div class="module-body table">
-=======
-							
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-<<<<<<< HEAD
 											<th>Họ và Tên</th>
 											<th>Mã số sinh viên</th>
 											<th>Hoạt động</th>
 											
-=======
-											<th> Tên</th>
-											<th>Mã số sinh viên</th>
-										
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 										</tr>
 									</thead>
 									<tbody>
@@ -161,17 +127,12 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($cnt);?></td>
 											<td><?php echo htmlentities($row['fullname']);?></td>
 											<td><?php echo htmlentities($row['idcard']);?></td>
-<<<<<<< HEAD
 											<td> <?php echo htmlentities($row['position']);?>
-										
-											
-											<a href="edit-members.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
-											<a href="manage-members.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Bạn có muốn xóa không?')"><i class="icon-remove-sign"></i></a></td>
+												<a href="edit-members.php?id=<?php echo $row['id']?>" ><i class="icon-edit"></i></a>
+												<a href="manage-members.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Bạn có muốn xóa không?')"><i class="icon-remove-sign"></i>
+												</a>
+											</td>
 										</tr>
-=======
-											
-											
->>>>>>> 31d3de0199750c504607828c3fe068449e0e2021
 										<?php $cnt=$cnt+1; } ?>
 										
 								</table>
